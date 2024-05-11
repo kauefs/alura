@@ -8,8 +8,8 @@ import streamlit           as st
 st.set_page_config(page_title='SEARCH', page_icon='🔎', layout='wide', initial_sidebar_state='expanded')
 # Iniciando Sessão:
 st.session_state.setdefault(None)
-
 # API-KEY
+api_key = st.secrets['api_key']
 genai.configure(api_key=api_key)
 # CONFIGURAÇÕES GERAIS
 # Função de Busca na WikePédia:
