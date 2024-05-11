@@ -5,9 +5,14 @@ import  google.generativeai as   genai
 import  google.ai.generativelanguage   as  glm
 from wikipedia.exceptions import DisambiguationError, PageError
 import streamlit           as st
+
 st.set_page_config(page_title='SEARCH', page_icon='🔎', layout='wide', initial_sidebar_state='expanded')
+
 # Iniciando Sessão:
 st.session_state.setdefault(None)
+if      'messages' not in st.session_state:st.session_state.messages=[]
+if 'last_messages' not in st.session_state:st.session_state.last_messages=''
+    
 # API-KEY
 api_key = st.secrets['api_key']
 genai.configure(api_key=api_key)
