@@ -105,19 +105,19 @@ st.sidebar.divider()
 # Configurações de Segurança:
 st.sidebar.success('Configurações de Segurança')
 seg               =   ['BLOCK_NONE','BLOCK_ONLY_HIGH', 'BLOCK_MEDIUM_AND_ABOVE', 'BLOCK_LOW_AND_ABOVE']
-hate              = st.sidebar.selectbox(   'Conteúdo de Ódio:'   , seg, index=0)
-harassment        = st.sidebar.selectbox(   'Conteúdo de Assédio:', seg, index=0)
-sexual            = st.sidebar.selectbox(   'Conteúdo Sexual:'    , seg, index=0)
-dangerous         = st.sidebar.selectbox(   'Conteúdo Perigoso:'  , seg, index=0)
+hate              = st.sidebar.selectbox( 'Conteúdo de Ódio:'   ,seg, index=0)
+harassment        = st.sidebar.selectbox( 'Conteúdo de Assédio:',seg, index=0)
+sexual            = st.sidebar.selectbox( 'Conteúdo Sexual:'    ,seg, index=0)
+dangerous         = st.sidebar.selectbox( 'Conteúdo Perigoso:'  ,seg, index=0)
 # Configurando Modelo:
 model_name        =  'gemini-pro'
-generation_config = {'candidate_count'  :    1 ,
-                     'temperature'      : temperature,
-                     'top_p'            : top_p,
-                     'top_k'            : top_k,
-                     'stop_sequences'   : None ,
-                     'max_output_tokens': max_output_tokens}
-safety_settings   = {'HATE'             :hate,
+generation_config = {'candidate_count'  :   1  ,
+                     'temperature'      :temperature,
+                     'top_p'            :top_p ,
+                     'top_k'            :top_k ,
+                     'stop_sequences'   :None  ,
+                     'max_output_tokens':max_output_tokens}
+safety_settings   = {'HATE'             :hate  ,
                      'HARASSMENT'       :harassment,
                      'SEXUAL'           :sexual,
                      'DANGEROUS'        :dangerous}
@@ -159,9 +159,8 @@ if query :=    st.chat_input('Pesquise na WikipédiA aqui.'):
                             summaries=  wikipedia_search(**fc['args'])
                             st.write('Consultas:\n', summaries)
                             response = chat.send_message(glm.Content(parts=[glm.Part(
-                                       function_response=glm.FunctionResponse(
-                                                    name='wikipedia_search', response={'result':summaries}
-                                                                                                        )
+                                       function_response=glm.FunctionResponse(name= 'wikipedia_search',
+                                                                          response={'result':summaries})
                                                                                                     )
                                                                                                 ]
                                                                                             )
@@ -169,12 +168,12 @@ if query :=    st.chat_input('Pesquise na WikipédiA aqui.'):
                             st.markdown(response.text)
                             # Função Embedding:
                             def get_embeddings(content:list[str])->np.ndarray:
-                                embeddings = genai.embed_content('models/embedding-001', content, 'SEMANTIC_SIMILARITY')
+                                embeddings =      genai.embed_content('models/embedding-001', content, 'SEMANTIC_SIMILARITY')
                                 embds      = embeddings.get('embedding', None)
-                                embds      = np.array(embds).reshape(len(embds),-1)
+                                embds      =         np.array(embds).reshape(len(embds),-1)
                                 return embds
                             # Função Produto Escalar:
-                            def dot_product(a:np.ndarray,  b:np.ndarray):
+                            def dot_product(a:np.ndarray, b:np.ndarray):
                                 return (a @ b.T)
                             # Aplicando a Função Embedding:
                             search_res     = get_embeddings(summaries)
@@ -183,7 +182,7 @@ if query :=    st.chat_input('Pesquise na WikipédiA aqui.'):
                             sim_value      = dot_product(search_res, embedded_query)
                             st.markdown(summaries[np.argmax(sim_value)])
                             st.write('Ranque:', sim_value[0])
-                            hyde             =model.generate_content(f'''
+                            hyde           = model.generate_content(f'''
                                 Gere resposta hipotética para a busca do usuário usando seu próprio conhecimento.
                                 Assuma que você sabe tudo sobre o tópico. Não use informação factual,
                                 use substituições para completar sua resposta.
