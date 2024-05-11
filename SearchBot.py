@@ -10,6 +10,7 @@ st.set_page_config(page_title='SEARCH', page_icon='🔎', layout='wide', initial
 st.session_state.setdefault(None)
 if      'messages' not in st.session_state:st.session_state.messages=[]
 if 'last_messages' not in st.session_state:st.session_state.last_messages=''    
+
 # API-KEY
 api_key = st.secrets['api_key']
 genai.configure(api_key=api_key)
@@ -17,14 +18,14 @@ genai.configure(api_key=api_key)
 # Função de Busca na WikePédia:
 def wikipedia_search(search_queries:list[str])->list[str]:
     '''Pesquisa na WikipédiA para cada questão, retornando resumo das páginas relevantes.'''
-    topics         = 3
-    search_history =set()
-    search_urls    =[]
-    mining_model   =genai.GenerativeModel('gemini-pro')
-    summary_results=[]
-    for query in search_queries:
+    topics          = 3
+    search_history  =set()
+    search_urls     =[]
+    mining_model    =genai.GenerativeModel('gemini-pro')
+    summary_results =[]
+    for query in  search_queries:
         print(f'Buscando por "{query}"')
-        search_terms = wikipedia.search(query)
+        search_terms= wikipedia.search(query)
         print(f'Termos relacionados: {search_terms[:topics]}')
         for    search_term in search_terms[:topics]:
             if search_term in search_history: continue
@@ -153,7 +154,7 @@ if query :=    st.chat_input('Pesquise na WikipédiA aqui.'):
                             st.markdown(query)
                     with    st.chat_message('assistant'):
                             result   =    chat.send_message(instructions.format(query=query))
-                            st.write('Buscando…')
+                            st.write('Buscando… (por favor, aguarde…')
                             fc       =  result.candidates[0].content.parts[0].function_call
                             fc       =type(fc).to_dict(fc)
                             summaries=  wikipedia_search(**fc['args'])
@@ -177,23 +178,23 @@ if query :=    st.chat_input('Pesquise na WikipédiA aqui.'):
                                 return (a @ b.T)
                             # Aplicando a Função Embedding:
                             search_res     = get_embeddings(summaries)
-                            embedded_query = get_embeddings([query])
+                            embedded_query = get_embeddings([query]  )
                             # Calculando Pontuação de Similaridade:
                             sim_value      = dot_product(search_res, embedded_query)
-                            st.markdown(summaries[np.argmax(sim_value)])
-                            st.write('Ranque:', sim_value[0])
+                            st.markdown(summaries[np.argmax(sim_value)] )
+                            st.write('Ranque:',             sim_value[0])
                             hyde           = model.generate_content(f'''
                                 Gere resposta hipotética para a busca do usuário usando seu próprio conhecimento.
                                 Assuma que você sabe tudo sobre o tópico. Não use informação factual,
                                 use substituições para completar sua resposta.
                                 query: {query}
                                                                       ''')
-                            st.write(hyde.text)
+                            st.write('Resposta Hipotética:\n',  hyde.text)
                             # Embedding a resposta hipotética para comparar com os resultados da busca:
                             hyde_res  = get_embeddings([hyde.text])
                             # Calculando Pontuação de Similaridade para Ranquear os Resultados:
                             sim_value = dot_product(search_res, hyde_res)
-                            st.markdown(summaries[np.argmax(sim_value)])
-                            st.write('Rerranqueamento:', sim_value[0])
+                            st.markdown(summaries[np.argmax(sim_value)] )
+                            st.write('Rerranqueamento:',    sim_value[0])
 st.divider()
 st.toast('Pesquise!', icon='🔍')
