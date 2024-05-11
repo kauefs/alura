@@ -1,0 +1,8 @@
+pip
+certifi
+numpy
+textwrap
+wikipedia
+google-generativeai
+google-ai-generativelanguage
+streamlit
