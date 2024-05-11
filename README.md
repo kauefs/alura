@@ -8,7 +8,7 @@
 
 $$10\ de\ maio\ de\ 2024$$
 
-## Projeto para a 2ª Edição da Imersão IA com [Alura](https://www.alura.com.br/) **+** [Google](https://gemini.google.com/)
+## Projeto para 2ª Edição de Imersão IA [Alura](https://www.alura.com.br/) **+** [Google](https://gemini.google.com/)
 
 ### <ins>Rerranqueamento de Pesquisas na WikipédiA</ins>
 
