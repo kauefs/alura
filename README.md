@@ -8,9 +8,9 @@
 
 $$10\ de\ maio\ de\ 2024$$
 
-# Projeto para a 2ª Edição da Imersão IA com [Alura](https://www.alura.com.br/) **&** [Google](https://gemini.google.com/)
+## Projeto para a 2ª Edição da Imersão IA com [Alura](https://www.alura.com.br/) **&** [Google](https://gemini.google.com/)
 
-## <ins>Rerranqueamento de Pesquisas na WikipédiA</ins>
+### <ins>Rerranqueamento de Pesquisas na WikipédiA</ins>
 
 Projeto inspirado em [exemplo](https://github.com/google-gemini/cookbook/blob/main/examples/Search_reranking_using_embeddings.ipynb) produzido pelo Google, usando a funcionalidade _Embedding_ da Inteligência Artificial (IA) **Gemini** do Google para rerranquear resultados de busca na WikipédiA.
 
