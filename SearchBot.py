@@ -148,11 +148,11 @@ st.markdown('''
 st.divider()
 # Chat de Pesquisa:
 chat   =  model.start_chat(enable_automatic_function_calling=False)
-st.subheader('Faça sua pesquina na WikipédiA em português aqui:')
+st.subheader('Pesquise na WikipédiA em português:')
 for message in st.session_state.messages:
           with      st.chat_message(message['role']):
                     st.markdown(message['content'])
-if query :=    st.chat_input('Faça sua pesquina na WikipédiA em português aqui.'):
+if query :=    st.chat_input('Pesquise na WikipédiA em português.'):
                     st.session_state.messages.append({'role':'user', 'content':query})
                     with    st.chat_message('user'):
                             st.markdown(query)
