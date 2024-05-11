@@ -1,4 +1,4 @@
-# <p align=center><font color=#F0F0F0 font-family=Georgia><ins><strong>ƊⱭȾɅViƧi🧿Ƞ</strong></ins></font></p>
+# <p align=center><font color=#F0F0F0 font-family=Georgia><ins>ƊⱭȾɅViƧi🧿Ƞ</ins></font></p>
 
 [![GitHub](  https://img.shields.io/badge/-000000?logo=github&logoColor=FFFFFF)](https://github.com/kauefs/)
 [![Medium](  https://img.shields.io/badge/-000000?logo=medium&logoColor=FFFFFF)](https://medium.com/@kauefs)
