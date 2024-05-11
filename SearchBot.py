@@ -97,18 +97,18 @@ st.sidebar.markdown('''
 st.sidebar.divider()
 # Configuração do Modelo Generativo:
 st.sidebar.info(   'Configurações do Modelo Generativo')
-temperature       = st.sidebar.slider(      'Temperature:', 0.00,  1.00, 0.65, 0.05)
+temperature       = st.sidebar.slider(      'Temperatura:', 0.00,  1.00, 0.65, 0.05)
 top_p             = st.sidebar.slider(      'Top P:'      , 0.00,  1.00, 0.95, 0.05)
 top_k             = st.sidebar.number_input('Top K:'            ,  1,     100,    3)
-max_output_tokens = st.sidebar.number_input('Max OutPut Tokens:',  1,    2048, 1024)
+max_output_tokens = st.sidebar.number_input('Quantidade Máxima de Tokens:', 1, 2048, 1024)
 st.sidebar.divider()
 # Configurações de Segurança:
 st.sidebar.success('Configurações de Segurança')
 seg               =   ['BLOCK_NONE','BLOCK_ONLY_HIGH', 'BLOCK_MEDIUM_AND_ABOVE', 'BLOCK_LOW_AND_ABOVE']
-hate              = st.sidebar.selectbox(   'Hate:'      , seg, index=0)
-harassment        = st.sidebar.selectbox(   'Harassment:', seg, index=0)
-sexual            = st.sidebar.selectbox(   'Sexual:'    , seg, index=0)
-dangerous         = st.sidebar.selectbox(   'Dangerous:' , seg, index=0)
+hate              = st.sidebar.selectbox(   'Conteúdo de Ódio:'   , seg, index=0)
+harassment        = st.sidebar.selectbox(   'Conteúdo de Assédio:', seg, index=0)
+sexual            = st.sidebar.selectbox(   'Conteúdo Sexual:'    , seg, index=0)
+dangerous         = st.sidebar.selectbox(   'Conteúdo Perigoso:'  , seg, index=0)
 # Configurando Modelo:
 model_name        =  'gemini-pro'
 generation_config = {'candidate_count'  :    1 ,
