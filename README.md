@@ -15,3 +15,5 @@ $$10\ de\ maio\ de\ 2024$$
 Projeto inspirado em [exemplo](https://github.com/google-gemini/cookbook/blob/main/examples/Search_reranking_using_embeddings.ipynb) produzido pelo Google, usando a funcionalidade _Embedding_ da Inteligência Artificial (IA) **Gemini** do Google para ranquear resultados de busca na WikipédiA.
 
 _Embedding_ é uma técnica de Processamento de Linguagem Natural (PLN) que converte texto em vetores numéricos, capturando significado semântico **&** contexto, de forma que textos com conteúdos semelhantes apresentam _embeddings_ mais próximos, permitindo comparações textuais e o relacionamento entre textos, facilitando busca **&** classificação.
+
+[Aplicativo Web](https://searchb0t.streamlit.app/)
