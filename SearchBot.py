@@ -25,7 +25,6 @@ def wikipedia_search(search_queries:list[str])->list[str]:
     search_urls    =[]
     mining_model   =genai.GenerativeModel('gemini-pro')
     summary_results=[]
-    wikipedia.set_lang('pt')
     for query in search_queries:
         print(f'Buscando por "{query}"')
         search_terms = wikipedia.search(query)
@@ -148,11 +147,11 @@ st.markdown('''
 st.divider()
 # Chat de Pesquisa:
 chat   =  model.start_chat(enable_automatic_function_calling=False)
-st.subheader('Pesquise na WikipédiA em português:')
+st.subheader('Faça sua pesquisa na WikipédiA:')
 for message in st.session_state.messages:
           with      st.chat_message(message['role']):
                     st.markdown(message['content'])
-if query :=    st.chat_input('Pesquise na WikipédiA em português.'):
+if query :=    st.chat_input('Pesquise na WikipédiA aqui.'):
                     st.session_state.messages.append({'role':'user', 'content':query})
                     with    st.chat_message('user'):
                             st.markdown(query)
