@@ -5,14 +5,11 @@ import  google.generativeai as   genai
 import  google.ai.generativelanguage   as  glm
 from wikipedia.exceptions import DisambiguationError, PageError
 import streamlit           as st
-
 st.set_page_config(page_title='SEARCH', page_icon='🔎', layout='wide', initial_sidebar_state='expanded')
-
 # Iniciando Sessão:
 st.session_state.setdefault(None)
 if      'messages' not in st.session_state:st.session_state.messages=[]
-if 'last_messages' not in st.session_state:st.session_state.last_messages=''
-    
+if 'last_messages' not in st.session_state:st.session_state.last_messages=''    
 # API-KEY
 api_key = st.secrets['api_key']
 genai.configure(api_key=api_key)
@@ -88,8 +85,7 @@ Busca do usuário: {query}
 
 # SIDE
 st.sidebar.image('https://pt.wikipedia.org/static/images/icons/wikipedia.png')
-# st.sidebar.image('https://pt.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-fr.svg')
-# st.sidebar.image('https://pt.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-pt.svg')
+st.sidebar.markdown('[![Wikipedia](https://img.shields.io/badge/Doações_à_WikipédiA-636466?style=flat&logo=wikipedia&logoColor=000000&labelColor=FFFFFF&color=939598)](https://donate.wikimedia.org/w/index.php?title=Special:LandingPage&country=BR&uselang=pt-br)')
 st.sidebar.title('Projeto para 2ª Edição de Imersão IA Alura + Google')
 st.sidebar.markdown('''
 [![GitHub](  https://img.shields.io/badge/-000000?logo=github&logoColor=FFFFFF)](https://github.com/kauefs/)
