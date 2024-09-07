@@ -6,6 +6,10 @@
 [![Python](  https://img.shields.io/badge/-3-4584B6?logo=python&logoColor=FFDE57&labelColor=4584B6&color=646464)](https://www.python.org/)
 [![License]( https://img.shields.io/badge/Apache--2.0-D22128?style=flat&logo=apache&logoColor=CB2138&label=License&labelColor=6D6E71&color=D22128)](https://www.apache.org/licenses/LICENSE-2.0)
 
+$$7\ de\ setembro\ de\ 2024$$
+
+## Imersão Dev com [Google Gemini](https://gemini.google.com/)
+
 $$10\ de\ maio\ de\ 2024$$
 
 ## Projeto para 2ª Edição de Imersão IA [Alura](https://www.alura.com.br/) **+** [Google](https://gemini.google.com/)
