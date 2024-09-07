@@ -10,6 +10,10 @@ $$7\ de\ setembro\ de\ 2024$$
 
 ## Imersão Dev com [Google Gemini](https://gemini.google.com/)
 
+Página web **&** Banco de Dados utilizando JavaScript.
+
+[Página Web](https://vermeer.vercel.app/)
+
 $$10\ de\ maio\ de\ 2024$$
 
 ## Projeto para 2ª Edição de Imersão IA [Alura](https://www.alura.com.br/) **+** [Google](https://gemini.google.com/)
