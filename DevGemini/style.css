@@ -3,7 +3,7 @@
 
 /* Estiliza corpo da página */
 body {
-    font-family:        'Verdana', sans-serif;     /* Define a fonte padrão */
+    font-family:        'Verdana', sans-serif;          /* Define a fonte padrão */
     background-color:   #000000;                        /* Cor de fundo da página */
     display:            flex;                           /* Usa Flexbox para layout */
     flex-direction:     column;                         /* Alinha os itens na vertical */
@@ -19,7 +19,7 @@ h1 {
     font-size:          2.5rem;                         /* Tamanho da fonte */
     color:              #F0F0F0;                        /* Cor do texto */
     text-align:         center;                         /* Alinha o texto ao centro */
-    letter-spacing:     .35rem;                          /* Espaçamento entre letras */
+    letter-spacing:     .35rem;                         /* Espaçamento entre letras */
 }
 
 /* Estiliza seções da página */
@@ -71,23 +71,23 @@ section button:hover {
 
 /* Estiliza cada item de resultado */
 .item-result {
-    background:         #F0F0F0;                        /* Cor de fundo dos itens */
-    border-radius:      .6rem;                          /* Borda arredondada */
-    padding:            1rem;                           /* Espaçamento interno */
-    margin-bottom:      1rem;                           /* Espaçamento abaixo dos itens */
-    box-shadow:         0 2px 4px rgba(0, 0, 0, 0.1);   /* Sombra leve */
+    background:         #F0F0F0;                          /* Cor de fundo dos itens */
+    border-radius:      .6rem;                            /* Borda arredondada */
+    padding:            1rem;                             /* Espaçamento interno */
+    margin-bottom:      1rem;                             /* Espaçamento abaixo dos itens */
+    box-shadow:         0 2px 4px rgba(0, 0, 0, 0.1);     /* Sombra leve */
 }
 
 /* Estiliza títulos dentro dos itens de resultado */
 .item-result h2 {
-    font-size:          1.5rem;                         /* Tamanho da fonte */
-    color:              #222831;                        /* Cor do texto */
+    font-size:          1.5rem;                           /* Tamanho da fonte */
+    color:              #222831;                          /* Cor do texto */
 }
 
 /* Estiliza links dentro dos itens de resultado */
 .item-result a {
-    text-decoration:    none;                           /* Remove o sublinhado padrão dos links */
-    color:              #30605E;                        /* Cor do texto dos links */
+    text-decoration:    none;                             /* Remove o sublinhado padrão dos links */
+    color:              #30605E;                          /* Cor do texto dos links */
 }
 
 /* Estiliza links quando são passados o mouse sobre */
