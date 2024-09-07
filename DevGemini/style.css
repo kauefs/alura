@@ -60,7 +60,7 @@ section button:hover {
 }
 
 /* Estiliza a caixa de resultados da pesquisa */
-.search-results {
+.results {
     width:              60rem;                          /* Largura máxima da caixa de resultados */
     height:             46vh;                           /* Altura máxima da caixa de resultados */
     overflow-y:         auto;                           /* Adiciona rolagem vertical se necessário */
@@ -70,7 +70,7 @@ section button:hover {
 }
 
 /* Estiliza cada item de resultado */
-.item-result {
+.item {
     background:         #F0F0F0;                          /* Cor de fundo dos itens */
     border-radius:      .6rem;                            /* Borda arredondada */
     padding:            1rem;                             /* Espaçamento interno */
@@ -79,24 +79,24 @@ section button:hover {
 }
 
 /* Estiliza títulos dentro dos itens de resultado */
-.item-result h2 {
+.item h2 {
     font-size:          1.5rem;                           /* Tamanho da fonte */
     color:              #222831;                          /* Cor do texto */
 }
 
 /* Estiliza links dentro dos itens de resultado */
-.item-result a {
+.item a {
     text-decoration:    none;                             /* Remove o sublinhado padrão dos links */
     color:              #30605E;                          /* Cor do texto dos links */
 }
 
 /* Estiliza links quando são passados o mouse sobre */
-.item-result a:hover {
+.item a:hover {
     text-decoration:    underline;                      /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Estiliza descrição meta dentro dos itens de resultado */
-.description-meta {
+.description {
     color:              #454545;                        /* Cor do texto */
     margin:             .5rem 0;                        /* Margem acima e abaixo */
 }
@@ -124,12 +124,12 @@ footer {
         padding:        .8rem;                          /* Espaçamento interno em telas menores */
     }
 
-    .search-results {
+    .search {
         width:          40rem;                          /* Largura da caixa de resultados em telas menores */
         height:         40vh;                           /* Altura da caixa de resultados em telas menores */
     }
 
-    .item-result h2 {
+    .item h2 {
         font-size:      1.3rem;                         /* Tamanho da fonte dos títulos em telas menores */
     }
 }
@@ -151,12 +151,12 @@ footer {
         font-size:      .9rem;                          /* Tamanho da fonte do botão em telas pequenas */
     }
 
-    .search-results {
+    .search {
         width:          90%;                            /* Largura da caixa de resultados em telas pequenas */
         height:         50vh;                           /* Altura da caixa de resultados em telas pequenas */
     }
 
-    .item-result h2 {
+    .item h2 {
         font-size:      1.1rem;                         /* Tamanho da fonte dos títulos em telas pequenas */
     }
 
