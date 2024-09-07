@@ -8,9 +8,9 @@ function search() {
     searchField = searchField.toLowerCase()
     // Start empty fields to store results:
     let results     = '';
-    let titulo      = ''; 
-    let descricao   = '';
-    let tags        = '';
+    let title       = ''; 
+    let description = '';
+    let symbolism   = '';
     // Iterate over every item on the data list:
     for (let item of data) {
         title       = item.title.toLowerCase()
