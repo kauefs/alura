@@ -10,11 +10,15 @@ $$22\ November\ 2024$$
 
 ## Imersão Dev Back-End
 
+Back-End DevelopMent with JavaScript
+
+[InstaByte]()
+
 $$7\ September\ 2024$$
 
 ## Imersão Dev com [Google Gemini](https://gemini.google.com/)
 
-Página web **&** Banco de Dados utilizando JavaScript.
+Página Web **&** Banco de Dados utilizando JavaScript.
 
 [WebSite](https://vermeer.vercel.app/)
 
