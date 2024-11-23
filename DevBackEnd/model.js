@@ -1,6 +1,6 @@
 import                   'dotenv/config';
 import { ObjectId } from    'mongodb'   ;
-import   dbConnect  from './dbConfig.js';
+import   dbConnect  from './dbconfig.js';
 // Connecting to DataBase Using EnvironMent Variable:
 const  connect = await dbConnect(process.env.CONNECTION);
 // Async Function to  Get All   Posts from DataBase:
