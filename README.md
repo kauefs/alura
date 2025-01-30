@@ -12,13 +12,13 @@
 
 $$31\ January\ 2025$$
 
-## Imersão Font-End
+## Font-End Immersion $2^{nd}$ Edition
 
 HTML **&** CSS **&** JavaScript **&** ReAct **&** Angular
 
 $$22\ November\ 2024$$
 
-## Imersão Dev Back-End
+## Back-End Immersion
 
 Back-End DevelopMent with JavaScript
 
@@ -26,7 +26,7 @@ Back-End DevelopMent with JavaScript
 
 $$7\ September\ 2024$$
 
-## Imersão Dev com [Google Gemini](https://gemini.google.com/)
+## Dev with [Google Gemini](https://gemini.google.com/) Immersion
 
 Web Page **&** Data Base using JavaScript.
 
@@ -34,7 +34,7 @@ Web Page **&** Data Base using JavaScript.
 
 $$10\ May\ 2024$$
 
-## Projeto para 2ª Edição de Imersão IA [Alura](https://www.alura.com.br/) **+** [Google](https://gemini.google.com/)
+## IA [Alura](https://www.alura.com.br/) **+** [Google](https://gemini.google.com/) Immersion $2^{nd}$ Edition
 
 ### <ins>Pesquisa na WikipédiA</ins>
 
