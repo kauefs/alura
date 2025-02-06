@@ -17,13 +17,15 @@ $$31\ January\ 2025$$
 
 HTML **&** CSS **&** JavaScript **&** ReAct
 
+[SpotiFy](https://spotyfi.vercel.app/)
+
 $$22\ November\ 2024$$
 
 ## Back-End Immersion
 
 Back-End DevelopMent with JavaScript
 
-[InstaByte](https://picpostme.vercel.app)
+[InstaByte](https://picpostme.vercel.app/)
 
 $$7\ September\ 2024$$
 
