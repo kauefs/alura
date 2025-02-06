@@ -11,7 +11,7 @@ const greetingMessage =
     currentHour >= 5 && currentHour < 12
         ? 'Morning!'
         : currentHour >= 12 && currentHour < 18
-        ? 'AfertNoon!'
+        ? 'AfterNoon!'
         : 'Night!';
 greetingElement.textContent=greetingMessage;
 // Intelligent Grid:
