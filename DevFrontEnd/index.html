@@ -1,1 +1,248 @@
-…
+<!DOCTYPE                               html                       >
+<html                                   lang='en'                 >
+<head                                                            >
+    <meta                            charset='UTF-8'           />
+    <meta                         http-equiv='X-UA-Compatible'/>
+    <meta                               name='viewport'    content='width=device-width, initial-scale=1.0'/>
+    <meta                               name='description' content='Music Streaming'                     />
+    <title>SpotiFy</title                                   >
+    <link                                rel='favicon'        type='image/x-icon' href='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/icons/favicon.png' alt='favicon'/>
+    <link                                rel='stylesheet'                         href='reset.css'    />
+    <link                                rel='stylesheet'                         href='style.css'   />
+    <link                                rel='stylesheet'                         href='https://use.fontawesome.com/releases/v5.15.4/css/solid.css'
+                                   integrity='sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE' crossorigin='anonymous'/>
+    <link                                rel='stylesheet'                         href='https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css'
+                                   integrity='sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7' crossorigin='anonymous'/>
+</head                                      >
+<body                                       >
+    <div                               class='sidebar'                 >
+        <nav                           class='sidebar-nav'             >
+            <div                       class='logo'                    >
+                <a                      href='https://open.spotify.com'>
+                    <img                 src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/icons/logo-spotify.png' alt='spotify logo'/>
+                </a                         >
+            </div                           >
+            <ul                             >
+                <li                         >
+                    <a                  href='https://open.spotify.com'>
+                        <span          class='fa     fa-home'  ></span >
+                        <span                             >Home</span  >
+                    </a                     >
+                </li                        >
+                <li                         >
+                    <a                  href='https://open.spotify.com/search'>
+                        <span          class='fa     fa-search'></span >
+                        <span                           >Search</span  >
+                    </a                     >
+                </li                        >
+            </ul                            >
+        </nav                               >
+            <div                       class='library'         >
+                <div                   class='library-content' >
+                    <button            class='library-button'  >
+                        <span          class='fa fas fa-book'  ></span >
+                        <span                          >Library</span  >
+                    </button                >
+                    <span              class='fa     fa-plus'></span   >
+                </div                       >
+                <section               class='playlist'        >
+                    <div               class='playlist-content'>
+                        <span          class='text    title'>PlayLists</span>
+                        <span          class='text subtitle'>Let<span id=bold>'</span>s Go<span id=bold>!</span></span>
+                        <button        class='playlist-button' >
+                            <span>Create PlayList</span >
+                        </button            >
+                    </div                   >
+                </section                   >
+                <div                   class='cookies'         >
+                    <a                  href='https://www.spotify.com/legal/cookies-policy/'>Cookies</a>
+                </div                       >
+                <div                   class='languages'       >
+                    <button            class='languages-button'>
+                        <span          class='fa     fa-globe'></span>
+                        <span                         >English</span>
+                    </button                >
+                </div                       >
+            </div                           >
+    </div                                   >
+<main                                       >
+    <div                               class='main'     >
+        <nav                           class='header'   >
+            <div                       class='nav'      >
+                <button                class='return'   >
+                    <img                 src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/icons/small-left.png'  alt='return' />
+                </button                    >
+                <button                class='advance'  >
+                    <img                 src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/icons/small-right.png' alt='advance'/>
+                </button                    >
+                <div                   class='search'   >
+                    <img                 src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/icons/search.png'      alt=''       />
+                    <input                id='searchbar' type='text' maxlength='800' autocorrect='off' autocapitalize='off' spellcheck='false' placeholder='What do you want to play?' value=''/>
+                </div                       >
+            </div                           >
+            <div                       class='headlogin'>
+                <button                class=   'signup'>SignUp</button>
+                <button                class=   ' login'>LogIn</button>
+            </div                           >
+        </nav                               >
+        <!--                                  PlayList         -->
+        <div                           class='playlist-container'>
+            <div                          id='playlist-results'  >
+                <div                   class='playlist-main'     >
+                    <!--                      Greetings        -->
+                    <H1                   id='greeting'>Welcome!</H1>
+                    <H2                class='session' >Session</H2>
+                </div                       >
+                <!--                          List Items       -->
+                <div                   class='scroll'            >
+                    <div               class='list'              >
+                        <section       class='list-item'         >
+                            <!--                    CARD1      -->
+                            <a         class='cards' href=''     >
+                                <div   class='cards card1'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/1.jpeg' atl=''/>
+                                    <span>ChistMas</span    >
+                                </div       >
+                            </a             >
+                            <!--                    CARD2      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card2'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/2.png' alt=''/>
+                                    <span>PopMix</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD3      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card3'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/3.jpeg' alt=''/>
+                                    <span>Hits</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD4      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card4'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/4.jpeg' alt=''/>
+                                    <span>Pop</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD5      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card5'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/5.jpeg' alt=''/>
+                                    <span>BeastMode</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD6      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card6'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/6.jpeg' alt=''/>
+                                    <span>PodCasts</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD7      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card7'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/7.jpeg' alt=''/>
+                                    <span>Sertanejo</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD8      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card8'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/8.jpeg' alt=''/>
+                                    <span>Samba&Pagode</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD9      -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card9'       >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/9.jpeg' alt=''/>
+                                    <span>Funk</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD10     -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card10'      >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/10.jpeg' alt=''/>
+                                    <span>MPB</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD11     -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card11'      >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/11.jpeg' alt=''/>
+                                    <span>Rock</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD12     -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card12'      >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/12.jpeg' alt=''/>
+                                    <span>HipHop</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD13     -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card13'      >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/13.jpeg' alt=''/>
+                                    <span>Indie</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD14     -->
+                            <a href='' class='cards'             >
+                                <div   class='cards card14'      >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/14.jpeg' alt=''/>
+                                    <span>Chill</span>
+                                </div       >
+                            </a             >
+                            <!--                    CARD15     -->
+                            <a         class='cards' href=''     >
+                                <div   class='cards card15'      >
+                                    <img src='https://github.com/alura-cursos/spotify-imersao/raw/refs/heads/main/spotify-imersao/src/assets/playlist/15.jpeg' alt=''/>
+                                    <span>Latin</span>
+                                </div       >
+                            </a             >
+                        </section           >
+                    </div                   >
+                </div                       >
+            </div                           >
+            <div                       class='hidden'      id='artist-result'>
+                <div                   class='grid-container'   >
+                    <div               class='artist-card' id=''>
+                        <div           class='card-img'>
+                            <img       class='artist-img'  id='artist-img'/>
+                            <div       class='play'>
+                                <span  class='fa fa-solid fa-play'></span>
+                            </div           >
+                        </div               >
+                        <div           class='card-text'>
+                            <a         class='vst'      title='Foo Fighters' href=''></a>
+                                <span  class='artist-name' id='artist-name'></span>
+                                <span  class='artist-categorie'     >Artist</span>
+                            </a             >
+                        </div               >
+                    </div                   >
+                </div                       >
+            </div                           >
+        </div                               >
+    </div                                   >
+</main                                      >
+<footer                                class='premium'         >
+    <div                               class='text'            >
+        <p                             class='premium-title'   >Premium Services</p>
+        <p                             class='premium-subtitle'>SubScribe for UnLimited Music <span id=bold>&</span> PodCasts</p>
+    </div                                   >
+    <div                               class='button'>
+        <button                         type='button'>SubScribe</button>
+    </div                                   >
+</footer                                    >
+<footer                                class='DataVision'>
+    <div                                    >
+        <hr                                 >
+        <p                             class=center><span id=bold>&copy;</span>2025 <span id=foot>ƊⱭȾɅViƧi🧿Ƞ</span><span id=bold>&trade;</span></p>
+    </div                                   >
+</footer                                    >
+    <script                             type='text/javascript'                           src='script.js'></script>
+    <script                             type='text/javascript'                           src='search.js'></script>
+</body                                      >
+</html                                      >
