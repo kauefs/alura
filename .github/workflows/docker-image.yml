@@ -34,4 +34,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build Docker Image
-      run: docker compose up ./DevOps --file docker-compose.yml
+      run: docker compose up
