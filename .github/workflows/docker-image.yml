@@ -1,3 +1,22 @@
+# name: Docker Image CI
+
+# on:
+#   push:
+#     branches: [ "@" ]
+#   pull_request:
+#     branches: [ "@" ]
+
+# jobs:
+
+#   build:
+
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - uses: actions/checkout@v4
+#     - name: Build Docker Image
+#       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
 name: Docker Image CI
 
 on:
@@ -15,4 +34,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build Docker Image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker compose up ./DevOps --file docker-compose.yml
