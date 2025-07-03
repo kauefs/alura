@@ -11,6 +11,12 @@
 
 </div>
 
+$$3\ July\ 2025$$
+
+## Cloud DevOps Immersion
+
+CI/CD with Docker
+
 $$31\ January\ 2025$$
 
 ## Font-End Immersion $2^{nd}$ Edition
