@@ -1,8 +1,8 @@
 from fastapi            import     FastAPI
 from database           import     engine,Base
-from routers.alunos     import     alunos_router
-from routers.cursos     import     cursos_router
-from routers.matriculas import matriculas_router
+from routes.alunos     import     alunos_router
+from routes.cursos     import     cursos_router
+from routes.matriculas import matriculas_router
 Base.metadata.create_all            (bind=engine)
 app =FastAPI(title      =  'Gestão Escolar API', 
              description='''
