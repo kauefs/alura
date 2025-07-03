@@ -15,10 +15,14 @@ name: Docker Image CI
 on:
   push:
     branches: [ "@" ]
-    paths:   'DevOps/**'
+  pull_request:
+    branches: [ "@" ]
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: DevOps
     steps  :
     - uses : actions/checkout@v4
     - name : Build Docker Image
