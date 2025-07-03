@@ -17,6 +17,8 @@ $$3\ July\ 2025$$
 
 CI/CD with Docker
 
+[![Docker Image CI](https://github.com/kauefs/alura/actions/workflows/docker-image.yml/badge.svg)](https://github.com/kauefs/alura/actions/workflows/docker-image.yml)
+
 $$31\ January\ 2025$$
 
 ## Font-End Immersion $2^{nd}$ Edition
