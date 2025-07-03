@@ -22,6 +22,7 @@ name: Docker Image CI
 on:
   push:
     branches: [ "@" ]
+    paths:    DevOps/**
   pull_request:
     branches: [ "@" ]
 
