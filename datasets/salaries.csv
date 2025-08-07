@@ -1,4 +1,4 @@
-year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO3
+year,level,contract,job,salary,currency,USD,residence,remote,location,size,ISO3
 2025,SE,FT,Solutions Engineer,214000,USD,214000,US,100,US,M,USA
 2025,SE,FT,Solutions Engineer,136000,USD,136000,US,100,US,M,USA
 2025,MI,FT,Data Engineer,158800,USD,158800,AU,0,AU,M,AUS
@@ -5587,7 +5587,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2025,MI,FT,Engineer,118657,USD,118657,US,0,US,M,USA
 2025,SE,FT,Software Engineer,291000,USD,291000,US,0,US,M,USA
 2025,SE,FT,Software Engineer,197000,USD,197000,US,0,US,M,USA
-,SE,FT,Product Manager,184500,USD,184500,US,0,US,M,USA
 2025,SE,FT,Product Manager,168000,USD,168000,US,0,US,M,USA
 2025,MI,FT,Manager,185400,USD,185400,US,0,US,M,USA
 2025,MI,FT,Manager,111200,USD,111200,US,0,US,M,USA
@@ -59691,7 +59690,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2025,MI,FT,Data Integration Specialist,75000,USD,75000,US,100,US,M,USA
 2025,SE,FT,Analyst,262500,USD,262500,US,100,US,M,USA
 2025,SE,FT,Analyst,119700,USD,119700,US,100,US,M,USA
-,MI,FT,Engineer,110000,USD,110000,DE,0,DE,M,DEU
 2025,MI,FT,Engineer,95483,USD,95483,DE,0,DE,M,DEU
 2025,EN,FT,Data Integration Analyst,56000,USD,56000,US,100,US,M,USA
 2025,EN,FT,Data Integration Analyst,42000,USD,42000,US,100,US,M,USA
@@ -59709,7 +59707,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2025,SE,FT,AI Architect,170000,USD,170000,US,0,US,M,USA
 2025,SE,FT,Data Scientist,150000,USD,150000,US,0,US,M,USA
 2025,SE,FT,Data Scientist,105000,USD,105000,US,0,US,M,USA
-,EN,FT,Data Scientist,208800,USD,208800,US,0,US,M,USA
 2025,EN,FT,Data Scientist,98300,USD,98300,US,0,US,M,USA
 2025,SE,FT,Data Scientist,155000,USD,155000,US,100,US,M,USA
 2025,SE,FT,Data Scientist,115200,USD,115200,US,100,US,M,USA
@@ -59758,7 +59755,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2025,EN,FT,Developer,58800,USD,58800,CA,0,CA,M,CAN
 2025,EN,FT,Developer,46800,USD,46800,CA,0,CA,M,CAN
 2025,SE,FT,Software Engineer,246500,USD,246500,US,0,US,M,USA
-,SE,FT,Software Engineer,135000,USD,135000,US,0,US,M,USA
 2025,SE,FT,Software Engineer,180000,USD,180000,US,100,US,M,USA
 2025,SE,FT,Software Engineer,140000,USD,140000,US,100,US,M,USA
 2025,SE,FT,Data Architect,179000,USD,179000,US,100,US,M,USA
@@ -59788,7 +59784,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2025,SE,FT,Prompt Engineer,160000,USD,160000,US,0,US,M,USA
 2025,SE,FT,Prompt Engineer,125000,USD,125000,US,0,US,M,USA
 2025,SE,FT,Engineer,184000,USD,184000,US,0,US,M,USA
-,SE,FT,Engineer,112000,USD,112000,US,0,US,M,USA
 2025,SE,FT,Software Engineer,356500,USD,356500,US,0,US,M,USA
 2025,SE,FT,Software Engineer,184000,USD,184000,US,0,US,M,USA
 2025,SE,FT,Engineer,287500,USD,287500,US,0,US,M,USA
@@ -130999,13 +130994,11 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2023,SE,FT,Data Scientist,156400,USD,156400,US,100,US,M,USA
 2023,SE,FT,Data Engineer,163800,USD,163800,US,0,US,M,USA
 2023,SE,FT,Data Engineer,126000,USD,126000,US,0,US,M,USA
-,SE,FT,Machine Learning Engineer,163800,USD,163800,US,0,US,M,USA
 2023,SE,FT,Machine Learning Engineer,126000,USD,126000,US,0,US,M,USA
 2023,SE,FT,Machine Learning Engineer,220000,USD,220000,US,0,US,M,USA
 2023,SE,FT,Machine Learning Engineer,150000,USD,150000,US,0,US,M,USA
 2023,SE,FT,Data Engineer,145000,USD,145000,US,0,US,M,USA
 2023,SE,FT,Data Engineer,115000,USD,115000,US,0,US,M,USA
-,SE,FT,Data Analytics Manager,204500,USD,204500,US,0,US,M,USA
 2023,SE,FT,Data Analytics Manager,138900,USD,138900,US,0,US,M,USA
 2023,MI,FT,Data Engineer,162500,USD,162500,US,0,US,M,USA
 2023,MI,FT,Data Engineer,130000,USD,130000,US,0,US,M,USA
@@ -133053,7 +133046,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2022,SE,FT,Data Engineer,135000,USD,135000,US,100,US,M,USA
 2022,SE,FT,Data Engineer,115000,USD,115000,US,100,US,M,USA
 2022,MI,FT,Machine Learning Engineer,121000,AUD,83864,AU,100,AU,L,AUS
-,EN,FT,Data Scientist,40000,USD,40000,JP,100,MY,L,JPN
 2022,MI,FT,Head of Data,30000,EUR,31520,EE,100,EE,S,EST
 2022,SE,FT,Machine Learning Engineer,57000,EUR,59888,NL,100,NL,L,NLD
 2020,EN,FT,Data Engineer,48000,EUR,54742,PK,100,DE,L,PAK
@@ -133280,7 +133272,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2021,MI,FT,Data Scientist,40900,GBP,56256,GB,50,GB,L,GBR
 2021,MI,FT,Data Scientist,2500000,INR,33808,IN,0,IN,M,IND
 2021,MI,FT,Data Scientist,85000,GBP,116914,GB,50,GB,L,GBR
-,MI,FT,Machine Learning Engineer,180000,PLN,46597,PL,100,PL,L,POL
 2020,EN,FT,Data Engineer,4450000,JPY,41689,JP,100,JP,S,JPN
 2020,SE,FT,Big Data Engineer,100000,EUR,114047,PL,100,GB,S,POL
 2021,MI,FT,Machine Learning Engineer,75000,EUR,88654,BE,100,BE,M,BEL
@@ -133316,7 +133307,6 @@ year,level,employment,job,salary,currency,USD,residence,remote,location,size,ISO
 2021,SE,FT,Data Scientist,152000,USD,152000,US,100,FR,L,USA
 2021,MI,FT,Big Data Engineer,18000,USD,18000,MD,0,MD,S,MDA
 2020,SE,FL,Computer Vision Engineer,60000,USD,60000,RU,100,US,S,RUS
-,MI,FT,Data Scientist,130000,USD,130000,US,50,US,L,USA
 2021,SE,FT,Computer Vision Engineer,102000,BRL,18907,BR,0,BR,M,BRA
 2021,EN,FT,Business Data Analyst,50000,EUR,59102,LU,100,LU,L,LUX
 2021,SE,FT,Principal Data Scientist,147000,EUR,173762,DE,100,DE,M,DEU
