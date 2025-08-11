@@ -11,6 +11,14 @@
 
 </div>
 
+$$8\ August\ 2025$$
+
+## Python Data Immersion
+
+Pandas **&** Plotly **&** StreamLit
+
+[DashBoard]()
+
 $$3\ July\ 2025$$
 
 ## Cloud DevOps Immersion
