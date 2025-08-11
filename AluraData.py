@@ -69,7 +69,7 @@ with   graf1:
                         title = 'Top 10 Jobs per Mean Salary',
                         labels={'USD':'Annual Mean Salary (USD)','job':''},
                         color = 'USD', color_continuous_scale=px.colors.sequential.Blues)
-        topChart.update_layout(title_x=.1, yaxis={'categoryorder':'total ascending'})
+        topChart.update_layout(title_x=.1, yaxis={'categoryorder':'total ascending'}, xaxis_title='')
         st.plotly_chart(topChart, use_container_width=True)
     else:st.warning('No Data for Top Jobs Chart.')
 with graf2:
