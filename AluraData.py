@@ -6,7 +6,9 @@ import plotly.express as px
 st.set_page_config(page_title='Data Area Salaries DashBoard', page_icon='📊', layout='wide')
 df= pd.read_csv   ('https://github.com/kauefs/alura/raw/refs/heads/@/datasets/salaries.csv')
 # SIDE:
-st.sidebar.header('🔍 Filters')
+st.sidebar.title  ('ƊⱭȾɅViƧi🧿Ƞ&trade;')
+st.sidebar.divider( )
+st.sidebar.header ('🔍 Filters')
 # Level:
 levels   =sorted(df['level'   ].unique( ))
 level    =st.sidebar.multiselect('Level'       , levels   , default=   levels)
@@ -25,9 +27,22 @@ filter=df[(df['level'   ].isin(levels   )) &
           (df['size'    ].isin(sizes    )) &
           (df['year'    ].isin(years    )) ]
 table=st.sidebar.empty( )
+st.sidebar.divider    ( )
+st.sidebar.markdown('''
+![2025.08.08   ](https://img.shields.io/badge/2023.08.08-000000)
+
+[![License     ](https://img.shields.io/badge/Apache--2.0-D22128?&logo=apache&logoColor=CB2138&label=License&labelColor=6D6E71)](https://www.apache.org/licenses/LICENSE-2.0)
+
+[![GitHub      ](https://img.shields.io/badge/-000000?logo=github&logoColor=FFFFFF)](https://github.com/kauefs/)
+[![Medium      ](https://img.shields.io/badge/-000000?logo=medium&logoColor=FFFFFF)](https://medium.com/@kauefs)
+[![LinkedIn    ](https://img.shields.io/badge/in-0077B5?logo=linkedin&logoColor=FFFFFF)](https://www.linkedin.com/in/kauefs/)
+[![Python      ](https://img.shields.io/badge/3-646464?logo=python&logoColor=FFDE57&labelColor=4584B6)](https://www.python.org/)
+
+[![ƊⱭȾɅViƧi🧿Ƞ](https://img.shields.io/badge/ƊⱭȾɅViƧi🧿Ƞ&trade;-0065FF?style=plastic&logoColor=0065FF&label=&copy;2025&labelColor=0065FF)](https://datavision.one/)
+                    ''')
 # MAIN:
-st.title('🎲 Data Area Salaries DashBoard')
-st.markdown('Exploring Salaries for Data Area in the Last Few Years')
+st.title    ('🎲 Data Area Salaries DashBoard')
+st.markdown ('Exploring Salaries for Data Area in the Last Few Years')
 # --- Main Metrics (KPIs) ---
 st.subheader('Main Metrics (Annual Salary in USD)')
 if  not filter.empty:
@@ -90,7 +105,7 @@ with graf4:
     else:st.warning('No Data for Countries Chart.')
 st.divider( )
 #  Table:
-if table.checkbox('DataFrame', value=True):
+if table.checkbox('DataFrame', value=False):
     st.subheader ('Data')
     st.markdown  (f'''➡️  Showing {'**{:,.0f}** entries:'.format(filter.shape[0])}''')
     st.dataframe (filter)
