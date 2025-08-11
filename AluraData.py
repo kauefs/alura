@@ -67,7 +67,8 @@ with   graf1:
         top=filter.groupby('job')['USD'].mean( ).nlargest(10).sort_values(ascending=True).reset_index( )
         topChart=px.bar(top, y= 'job', x='USD', orientation='h',
                         title = 'Top 10 Jobs per Mean Salary',
-                        labels={'USD':'Annual Mean Salary (USD)','job':''})
+                        labels={'USD':'Annual Mean Salary (USD)','job':''},
+                        color = 'USD', color_continuous_scale=px.colors.sequential.Blues)
         topChart.update_layout(title_x=.1, yaxis={'categoryorder':'total ascending'})
         st.plotly_chart(topChart, use_container_width=True)
     else:st.warning('No Data for Top Jobs Chart.')
@@ -75,7 +76,8 @@ with graf2:
     if  not filter.empty:
         hist=px.histogram(filter, x='USD', nbins=30,
                           title = 'Annual Salary Distribution',
-                          labels={'USD': 'Salary Range (USD)','count':''})
+                          labels={'USD': 'Salary Range (USD)','count':''},
+                          color_discrete_sequence=['#6596EE'])
         hist.update_layout(title_x=.1, yaxis_title='')
         st.plotly_chart(hist, use_container_width=True)
     else:st.warning('No Data for Distribution Chart.')
@@ -86,7 +88,8 @@ with graf3:
         remote.columns=['type','quantity']
         remote=px.pie(remote, names='type', values='quantity',
                       title='Job Types Proportion',
-                      hole=.5)
+                      hole =.5,)
+                     #color_discrete_sequence=px.colors.qualitative.Pastel)
         remote.update_traces(textinfo='label+percent')
         remote.update_layout(title_x=.1)
         st.plotly_chart(remote, use_container_width=True)
