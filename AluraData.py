@@ -51,12 +51,13 @@ if  not filter.empty:
     entries   =filter.shape[0]
     freq      =filter['job'].mode( )[0]
 else: meanSalary, maxSalary, entries, freq = 0, 0, 0, ''
-col1, col2, col3, col4 = st.columns(4)
-col1.metric(label='Mean Salary'       ,  value=f'${meanSalary:,.0f}')
-col2.metric(label= 'Max Salary'       ,  value=f'${ maxSalary:,.0f}')
-col3.metric(label='Total Entries'     ,  value=f'{    entries:,.0f}')
-col4.metric(label='Most Frequent Job' ,  value=freq,  delta= None, delta_color='normal', help=None,
+col1,col2=st.columns(2)
+col1.metric(label='Total Entries'     ,  value=f'{    entries:,.0f}')
+col2.metric(label='Most Frequent Job' ,  value=freq,  delta= None, delta_color='normal', help=None,
             label_visibility='visible', border=False) #, width='stretch', height='content')
+col3,col4=st.columns(2)
+col3.metric(label='Mean Salary'       ,  value=f'${meanSalary:,.0f}')
+col4.metric(label= 'Max Salary'       ,  value=f'${ maxSalary:,.0f}')
 st.divider ( )
 # Plotly:
 st.subheader('Charts')
