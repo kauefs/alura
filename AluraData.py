@@ -29,7 +29,7 @@ filter=df[(df['level'   ].isin(levels   )) &
 table=st.sidebar.empty( )
 st.sidebar.divider    ( )
 st.sidebar.markdown('''
-![2025.08.08   ](https://img.shields.io/badge/2023.08.08-000000)
+![2025.08.08   ](https://img.shields.io/badge/2025.08.08-000000)
 
 [![License     ](https://img.shields.io/badge/Apache--2.0-D22128?&logo=apache&logoColor=CB2138&label=License&labelColor=6D6E71)](https://www.apache.org/licenses/LICENSE-2.0)
 
