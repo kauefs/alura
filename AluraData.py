@@ -6,9 +6,6 @@ import  streamlit         as st
 import     plotly.express as px
 import matplotlib.pyplot  as plt
 import    seaborn         as sns
-import ssl
-ssl._create_default_https_context=ssl._create_unverified_context # Disable SSL Certificate Verification
-url ='https://github.com/'
 # Settings:
 pd.options.plotting.matplotlib.register_converters = True
 pd.options.display.max_columns         =             None
@@ -133,7 +130,7 @@ with graf5:
     else:st.warning     ('No Data for Level Distribution Chart.')
 with graf6:
     if  not  filter.empty:
-        mean=df.groupby('level')['USD'].mean( ).reset_index( )
+        mean=filter.groupby('level')['USD'].mean( ).reset_index( )
         colors = ['#6595EE','#0065FF','#00FFFF' ,'#00BFFF']
         fig =px.bar(mean, y=     'USD'   , x='level',
                     title  = 'Mean Salary per Level',
@@ -153,13 +150,18 @@ with graf7:
     else:st.warning     ('No Data for Countries with Highest Chart.')
 with graf8:
     if  not  filter.empty:
+        # ev = filter.groupby('year') ['USD'].mean( ).reset_index( )
+        # fig=px.line(ev, x = 'year',y='USD',
+        # title='Mean Annual Salary Evolution',
+        # markers=True, color_discrete_sequence=['#20B2AA'])
+        # fig.update_layout(xaxis=dict(tickmode='linear', dtick=1), showlegend=False)
         jr  =filter[filter['level']=='entry']['job'].value_counts( ).nlargest(5).index.tolist( )
         only=filter[filter['job'].isin(jr)]
         grup=only.groupby(['job','year'])['USD'].mean( ).reset_index( )
         fig =px.line(grup,     x='year',y='USD',
                     title  = 'Entry Level Mean Annual Salary Evolution',
                     labels ={'year':'year','USD':'Mean Salary (USD)','job':'job'},
-                    color  = 'job')
+                    color  = 'job', markers=True)
         fig.update_layout(xaxis=dict(tickmode='linear', dtick=1), showlegend=True)
         st .plotly_chart ( fig ,   use_container_width =True)
     else:st.warning('No Data for Entry Level Mean Annual Salary Evolution Chart.')
