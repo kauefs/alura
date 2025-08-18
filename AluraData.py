@@ -187,3 +187,4 @@ if table.checkbox('DataFrame', value=False):
     st.markdown  (f'''➡️  Showing {'**{:,.0f}** entries:'.format(filter.shape[0])}''')
     st.dataframe (filter)
     st.divider   (      )
+st.toast('Ready!', icon='📊')
