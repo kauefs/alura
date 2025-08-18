@@ -1,7 +1,23 @@
 # https://dashboard-salarios-dados.streamlit.app/
-import pandas         as pd
-import streamlit      as st
-import plotly.express as px
+from seaborn import palettes
+import      numpy         as np
+import     pandas         as pd
+import  streamlit         as st
+import     plotly.express as px
+import matplotlib.pyplot  as plt
+import    seaborn         as sns
+import ssl
+ssl._create_default_https_context=ssl._create_unverified_context # Disable SSL Certificate Verification
+url ='https://github.com/'
+# Settings:
+pd.options.plotting.matplotlib.register_converters = True
+pd.options.display.max_columns         =             None
+plt.rcParams[  'figure.autolayout']    =             True
+plt.rcParams[    'font.family'    ]    =                                          'sans-serif'
+sns.set_theme(context='notebook', style='whitegrid', palette='colorblind',  font ='sans-serif', font_scale=1.15, color_codes=True, rc={'grid.color':'1','grid.linestyle':':'})
+FontT={'family':'sans-serif'    ,'color':'#000000', 'size': 13,    'fontweight':'semibold'  }
+FontY={'family':'sans-serif'    ,'color':'#FF4500', 'size': 10,    'fontweight':'regular'   }
+FontX={'family':'sans-serif'    ,'color':'#4CAF50', 'size': 10,    'fontweight':'regular'   }
 # PAGE:
 st.set_page_config(page_title='Data Area Salaries DashBoard', page_icon='📊', layout='wide')
 df= pd.read_csv   ('https://github.com/kauefs/alura/raw/refs/heads/@/datasets/salaries.csv')
@@ -64,16 +80,41 @@ st.divider ( )
 st.subheader('Charts')
 graf1, graf2=st.columns(2)
 with   graf1:
+    if  not  filter.empty:
+        most=filter['job'].value_counts     ( )
+        mostChart=most.head (10).reset_index( )
+        mostChart.columns=['job','frequency']
+        fig=px.bar(mostChart, y='job',x='frequency', color='job', orientation='h',
+                                color_continuous_scale='rdylgn',
+                                title  = 'Most Frequent Professions',
+                                labels ={'frequency':'','job':''})
+        fig.update_layout(yaxis={'categoryorder':'total ascending'})
+        st.plotly_chart(fig, use_container_width=True)
+    else:st.warning('No Data for Most Frequent Professions Chart.')
+with graf2:
     if  not filter.empty:
         top=filter.groupby('job')['USD'].mean( ).nlargest(10).sort_values(ascending=True).reset_index( )
         topChart=px.bar(top, y= 'job', x='USD', orientation='h',
-                        title = 'Top 10 Jobs per Mean Salary',
+                        title = 'Top Jobs per Mean Salary',
                         labels={'USD':'Annual Mean Salary (USD)','job':''},
                         color = 'USD', color_continuous_scale=px.colors.sequential.Blues)
         topChart.update_layout(title_x=.1, yaxis={'categoryorder':'total ascending'}, xaxis_title='')
         st.plotly_chart(topChart, use_container_width=True)
     else:st.warning('No Data for Top Jobs Chart.')
-with graf2:
+graf3,graf4=st.columns(2)
+with graf3:
+    if    not  filter.empty:
+        remote=filter['remote'].value_counts( ).reset_index( )
+        remote.columns=['type','quantity']
+        remote=px.pie(remote, names='type', values='quantity',
+                      title='Job Types',
+                      hole =.5,)
+                     #color_discrete_sequence=px.colors.qualitative.Pastel)
+        remote.update_traces(textinfo='label+percent')
+        remote.update_layout(title_x=.1)
+        st.plotly_chart(remote, use_container_width=True)
+    else:st.warning('No Data for Job Types Chart.')
+with graf4:
     if  not filter.empty:
         hist=px.histogram(filter, x='USD', nbins=30,
                           title = 'Annual Salary Distribution',
@@ -82,20 +123,49 @@ with graf2:
         hist.update_layout(title_x=.1, yaxis_title='')
         st.plotly_chart(hist, use_container_width=True)
     else:st.warning('No Data for Distribution Chart.')
-graf3,graf4=st.columns(2)
-with graf3:
-    if    not  filter.empty:
-        remote=filter['remote'].value_counts( ).reset_index( )
-        remote.columns=['type','quantity']
-        remote=px.pie(remote, names='type', values='quantity',
-                      title='Job Types Proportion',
-                      hole =.5,)
-                     #color_discrete_sequence=px.colors.qualitative.Pastel)
-        remote.update_traces(textinfo='label+percent')
-        remote.update_layout(title_x=.1)
-        st.plotly_chart(remote, use_container_width=True)
-    else:st.warning('No Data for Job Types Chart.')
-with graf4:
+graf5,graf6=st.columns(2)
+with graf5:
+    if  not  filter.empty:
+        colors=['#6595EE','#0065FF','#00FFFF' ,'#00BFFF']
+        fig=px.bar(data_frame=filter, x='level', color='level', color_discrete_sequence=colors)
+        fig.update_layout(title_text='Level Distribution', yaxis_title=None, xaxis_title=None, showlegend=False)
+        st.plotly_chart  (fig, use_container_width=True)
+    else:st.warning     ('No Data for Level Distribution Chart.')
+with graf6:
+    if  not  filter.empty:
+        mean=df.groupby('level')['USD'].mean( ).reset_index( )
+        colors = ['#6595EE','#0065FF','#00FFFF' ,'#00BFFF']
+        fig =px.bar(mean, y=     'USD'   , x='level',
+                    title  = 'Mean Salary per Level',
+                    labels ={'level':'','USD':'Mean Salary (USD)'},
+                    color  = 'level', color_discrete_sequence=colors)
+        fig.update_layout(xaxis={'categoryorder':'total descending'}, showlegend=False)
+        st .plotly_chart ( fig ,   use_container_width =True)
+    else:st.warning('No Data for Mean Salary per Level Chart.')
+graf7,graf8=st.columns(2)
+with graf7:
+    if  not  filter.empty:
+        medcount=filter.groupby('ISO3')['USD'].mean( ).reset_index( )
+        select=medcount.sort_values(by='USD', ascending=False).head(10)
+        fig=px.bar(data_frame=select, y='USD', x='ISO3', color='ISO3')
+        fig.update_layout(title_text='Countries with Highest Salaries', yaxis_title=None, xaxis_title=None, showlegend=False)
+        st.plotly_chart  (fig, use_container_width=True)
+    else:st.warning     ('No Data for Countries with Highest Chart.')
+with graf8:
+    if  not  filter.empty:
+        jr  =filter[filter['level']=='entry']['job'].value_counts( ).nlargest(5).index.tolist( )
+        only=filter[filter['job'].isin(jr)]
+        grup=only.groupby(['job','year'])['USD'].mean( ).reset_index( )
+        fig =px.line(grup,     x='year',y='USD',
+                    title  = 'Entry Level Mean Annual Salary Evolution',
+                    labels ={'year':'year','USD':'Mean Salary (USD)','job':'job'},
+                    color  = 'job')
+        fig.update_layout(xaxis=dict(tickmode='linear', dtick=1), showlegend=True)
+        st .plotly_chart ( fig ,   use_container_width =True)
+    else:st.warning('No Data for Entry Level Mean Annual Salary Evolution Chart.')
+st.divider( )
+left,center,right=st.columns(spec=[.15,10,.15])
+with center:
     if  not  filter.empty:
         ds  =filter[filter['job']=='Data Scientist']
         mean=ds.groupby('ISO3')['USD'].mean( ).reset_index( )
