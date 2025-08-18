@@ -6,9 +6,10 @@ import plotly.express as px
 st.set_page_config(page_title='Data Area Salaries DashBoard', page_icon='📊', layout='wide')
 df= pd.read_csv   ('https://github.com/kauefs/alura/raw/refs/heads/@/datasets/salaries.csv')
 # SIDE:
-st.sidebar.title  ('ƊⱭȾɅViƧi🧿Ƞ&trade;')
-st.sidebar.divider( )
-st.sidebar.header ('🔍 Filters')
+st.sidebar.title    ('ƊⱭȾɅViƧi🧿Ƞ&trade;')
+st.sidebar.divider  ( )
+st.sidebar.header   ('Exploring Salaries for Data Area')
+st.sidebar.subheader('🔍 Filters')
 # Level:
 levels   =sorted(df['level'   ].unique( ))
 level    =st.sidebar.multiselect('Level'       , levels   , default=   levels)
@@ -22,10 +23,10 @@ size     =st.sidebar.multiselect('Company Size', sizes    , default=    sizes)
 years    =sorted(df['year'    ].unique( ))
 year     =st.sidebar.multiselect('Year'        , years    , default=    years)
 # DataFrame:
-filter=df[(df['level'   ].isin(levels   )) &
-          (df['contract'].isin(contracts)) &
-          (df['size'    ].isin(sizes    )) &
-          (df['year'    ].isin(years    )) ]
+filter=df[(df['level'   ].isin(level   )) &
+          (df['contract'].isin(contract)) &
+          (df['size'    ].isin(size    )) &
+          (df['year'    ].isin(year    )) ]
 table=st.sidebar.empty( )
 st.sidebar.divider    ( )
 st.sidebar.markdown('''
@@ -42,7 +43,7 @@ st.sidebar.markdown('''
                     ''')
 # MAIN:
 st.title    ('🎲 Data Area Salaries DashBoard')
-st.markdown ('Exploring Salaries for Data Area in the Last Few Years')
+st.divider  ( )
 # --- Main Metrics (KPIs) ---
 st.subheader('Main Metrics (Annual Salary in USD)')
 if  not filter.empty:
@@ -81,7 +82,7 @@ with graf2:
         hist.update_layout(title_x=.1, yaxis_title='')
         st.plotly_chart(hist, use_container_width=True)
     else:st.warning('No Data for Distribution Chart.')
-graf3, graf4 = st.columns(2)
+graf3,graf4=st.columns(2)
 with graf3:
     if    not  filter.empty:
         remote=filter['remote'].value_counts( ).reset_index( )
