@@ -4,6 +4,12 @@
 </div>
 <br><br>
 
+$$15\ September\ 2025$$
+
+## Agents AI Immersion
+
+RAG
+
 $$8\ August\ 2025$$
 
 ## Python Data Immersion
