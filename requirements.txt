@@ -34,8 +34,10 @@ google-generativeai
 google-ai-generativelanguage
 langgraph
 langchain
+langchain-core
 langchain-community
 langchain-google-genai
 langchain-text-splitters
 pymupdf
+pydantic
 faiss-cpu
