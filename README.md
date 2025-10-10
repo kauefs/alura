@@ -4,6 +4,12 @@
 </div>
 <br><br>
 
+$$10\ October\ 2025$$
+
+## AI Immersion $4^{th}$ Edition
+
+[N8N](https://datavisionone.app.n8n.cloud/webhook/0f873d78-f495-4300-ac2d-63cb44785a52/chat)
+
 $$15\ September\ 2025$$
 
 ## Agents AI Immersion
