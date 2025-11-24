@@ -1,4 +1,4 @@
-# 🤖 Knowledge Base Generator (Gemini)
+# 🤖 KnowLedge DataBase Generator Using Gemini
 
 This is a technical documentation detailing the functionality and execution of a **Node.js script** designed to automate the expansion of a technology knowledge base using the Gemini API.
 
