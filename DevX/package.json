@@ -1,0 +1,14 @@
+{
+  "name": "knowledge-generator",
+  "version": "1.0.0",
+  "description": "KnowLedge DataBase Generator Using Gemini API.",
+  "main": "KnowLedgeDataBase.js",
+  "scripts":{
+    "start":"node -r dotenv/config generator.js"},
+  "keywords":[ ],
+  "author":"",
+  "license":"ISC",
+  "dependencies":{
+    "dotenv":"^16.4.5"
+  }
+}
