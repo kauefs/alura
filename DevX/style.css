@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Imports the Quicksand font from Google Fonts */
+*{box-sizing: border-box;} /* Ensures that padding and border do not increase the total size of the element */
+:root{--primary-color:  #6595EE;  /* Primary color (light blue) */
+      --secondary-color:#F0F0F0;  /* Secondary color (light gray) */
+      --tertiary-color: #C0C0C0;  /* Tertiary color (medium gray) */
+      --bg-color:       #000000;} /* Background color (dark gray) */
+body {margin:  0;                            /* Removes the default body margin */
+      background: var(--bg-color);           /* Sets the background color using a variable */
+      color:      var(--secondary-color);    /* Sets the default text color using a variable */
+      font-family: "Quicksand", sans-serif;} /* Sets the font family */
+header {
+    padding: 2rem 1rem; /* Internal spacing (2rem top/bottom, 1rem sides) */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Aligns items vertically to the center */
+    justify-content: space-around; /* Distributes items with space around them */
+    position: sticky; /* Keeps the header fixed at the top when scrolling the page */
+    top: 0; /* Top position when sticky */
+    background: var(--bg-color); /* Header background color */
+    z-index: 10; /* Defines the stacking order to be above other elements */
+    border-bottom: 1px solid var(--bg-color); /* Adds a bottom border */
+    gap: 1rem; /* Spacing between flex items */
+}
+header h1 {
+    font-size: 1.5rem; /* Font size */
+    margin: 0; /* Removes default margin */
+    font-weight: 500; /* Font weight (medium) */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+div input {
+    padding: .375rem .75rem; /* Internal spacing */
+    border-radius: 1rem; /* Rounds the borders */
+    border: 1px solid var(--tertiary-color); /* Defines the border */
+    background: var(--bg-color); /* Background color */
+    font-family: inherit; /* Inherits the font family from the parent element */
+    font-size: 1.5rem; /* Font size */
+    transition: all .2s ease; /* Adds a smooth transition for all properties */
+    width: 30rem; /* Input width */
+    color: var(--secondary-color); /* Color of the typed text */
+    margin-right: .5rem; /* Right margin */
+}
+div input::placeholder {
+    font-size: 1.2rem; /* Placeholder font size */
+    font-weight: 300; /* Placeholder font weight */
+    color: var(--tertiary-color); /* Placeholder text color */
+}
+div input:focus {
+    outline: none; /* Removes the default focus border */
+    border-color: var(--bg-color); /* Changes the border color on focus */
+    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adds a box shadow to indicate focus */
+}
+#search-button {
+    padding: 1rem 2rem; /* Internal spacing */
+    border-radius: 1rem; /* Rounds the borders */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a hand on hover */
+    font-family: inherit; /* Inherits the font family */
+    font-weight: 500; /* Font weight */
+    font-size: 1rem; /* Font size */
+    white-space: nowrap; /* Prevents text from wrapping */
+    transition: background-color .2s ease, color .2s ease; /* Smooth transition for background color and text color */
+    background-color: var(--bg-color); /* Background color */
+    color: var(--secondary-color); /* Text color */
+    border: 1px solid var(--bg-color); /* Adds a border */
+}
+#search-button:hover {
+    background-color: var(--primary-color); /* Changes the background color on hover */
+    color: var(--bg-color); /* Changes the text color on hover */
+    box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adds a box shadow */
+}
+#search-button:active {
+    transform: scale(.98); /* Click effect (shrinks size) */
+}
+main {
+    overflow-y: scroll; /* Adds a vertical scrollbar if the content exceeds the height */
+    max-width: 80rem; /* Maximum width of the main content */
+    margin: 0 auto; /* Centers the main content horizontally */
+    margin-top: 2rem; /* Top margin */
+    height: calc(100vh - 10rem - 4rem); /* Calculates the height to fill the remaining screen space */
+}
+article {
+    background: none; /* No background color */
+    border-radius: 0; /* No rounded borders */
+    padding: 0; /* Removes padding */
+    padding: 0 1rem; /* Internal side spacing */
+    margin-bottom: 1.25rem; /* Bottom margin */
+    box-shadow: none; /* No shadow */
+    transition: background-color .3s ease, border-bottom-color .3s ease; /* Smooth transition */
+    border-bottom: 1px solid var(--bg-color); /* Bottom border */
+    padding-bottom: 1.5rem; /* Bottom internal spacing */
+}
+article:hover {
+    transform: scale(1.01); /* Slightly increases the size on hover */
+    cursor: pointer; /* Changes the cursor to a hand */
+}
+article h2 {
+    margin-top: 0; /* Removes the top margin */
+    font-weight: 600; /* Font weight */
+    font-size: 1.6rem; /* Font size */
+    border-bottom: none; /* No bottom border */
+    padding-bottom: 0; /* No bottom internal spacing */
+    margin-bottom: .25rem; /* Bottom margin */
+    color: var(--primary-color); /* Text color */
+}
+article p {
+    margin: .5rem 0; /* Top and bottom margin */
+    line-height: 1.6; /* Line height for better readability */
+    font-size: 1rem; /* Font size */
+    margin-bottom: .5rem; /* Bottom margin */
+    color: var(--secondary-color); /* Text color */
+}
+article p strong {
+    color: var(--tertiary-color); /* Bold text color */
+    font-weight: 400; /* Font weight */
+}
+article a {
+    color: var(--primary-color); /* Link color */
+    text-decoration: none; /* Removes the default underline */
+    font-weight: 200; /* Font weight */
+}
+article a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+.footer {
+    position: absolute; /* Absolute positioning relative to the positioned parent element */
+    bottom: 0; /* Aligns to the bottom */
+    left: 0; /* Aligns to the left */
+    width: 100%; /* Full width */
+    color: var(--tertiary-color); /* Text color */
+    background-color: var(--bg-color); /* Background color */
+    padding: 15px 20px; /* Internal spacing */
+    border-top: 1px solid #000000; /* Top border */
+    font-size: .8rem; /* Font size */
+}
+.footer-location {
+    color: #C0C0C0; /* Text color */
+    margin-bottom: 10px; /* Bottom margin */
+}
+.footer-links {
+    list-style: none; /* Removes list markers */
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers items horizontally */
+    gap: 15px; /* Spacing between links */
+}
+.footer-links a {
+    color: var(--secondary-color); /* Link color */
+    text-decoration: none; /* Removes underline */
+    transition: color .2s; /* Smooth color transition */
+}
+.footer-links a:hover {
+    color: var(--accent-color); /* Changes link color on hover (variable not defined) */
+}
+@media (max-width: 768px) {
+    header { /* Styles for screens with a maximum width of 768px */
+        flex-direction: column; /* Organizes header items in a column */
+        padding: 1rem; /* Reduces internal spacing */
+    }
+    header h1 { /* Styles for h1 in the header on smaller screens */
+        text-align: center; /* Centers the text */
+        margin-bottom: 1rem; /* Adds bottom margin */
+    }
+    div input { /* Styles for the input on smaller screens */
+        width: 90vw; /* Width based on viewport width */
+        font-size: 1.2rem; /* Reduces font size */
+    }
+    main { /* Styles for main on smaller screens */
+        padding: 0 1rem; /* Adds side spacing */
+    }
+    article:hover { /* Styles for article on smaller screens */
+        transform: none; /* Removes the scale effect on hover */
+    }}
+@media (max-width: 480px) {
+    header h1 { /* Styles for h1 on screens with a maximum width of 480px */
+        font-size: 1rem; /* Further reduces font size */
+        max-width:  70%; /* Sets a maximum width */
+        word-wrap: break-word; /* Allows long words to break */
+    }
+    div input, /* Styles for the input and its placeholder on very small screens */
+    div input::placeholder {
+        font-size: 1rem; /* Reduces font size */
+    }
+    article h2 { /* Styles for the article h2 on very small screens */
+        font-size: 1.3rem; /* Reduces font size */
+    }
+    div { /* Styles for the header div on very small screens */
+        display:          flex; /* Enables flexbox */
+        align-items:    center; /* Aligns items to the center */
+        justify-content:center; /* Centers items */
+        flex-direction: column; /* Organizes in a column */
+        gap:             .5rem; /* Spacing between items */
+    }
+    .footer { /* Styles for the footer on very small screens */
+        display: none; /* Hides the footer */
+    }
+    button { /* Styles for the button on very small screens */
+        margin-top: 1rem; /* Adds top margin */
+    }}
