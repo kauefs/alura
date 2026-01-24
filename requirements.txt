@@ -4,12 +4,12 @@ ta
 numpy
 pandas
 pandas_datareader
-pandas_profiling
+#pandas_profiling
 matplotlib
 seaborn
 pydeck
 plotly
-altair
+altair<5
 yfinance
 mplfinance
 datetime
@@ -17,7 +17,7 @@ wordcloud
 folium
 scipy
 scikit-learn
-streamlit==1.41.0
+streamlit>1.49.0
 streamlit_folium
 streamlit-bokeh
 streamlit_image_coordinates
