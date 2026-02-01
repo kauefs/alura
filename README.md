@@ -4,6 +4,14 @@
 </div>
 <br><br>
 
+$$2\ February\ 2026$$
+
+## Python Data Immersion
+
+Pandas **&** Plotly **&** StreamLit
+
+[DashBoard](https://datasalaries.streamlit.app/)
+
 $$10\ October\ 2025$$
 
 ## AI Immersion $4^{th}$ Edition
