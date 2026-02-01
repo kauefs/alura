@@ -77,8 +77,8 @@ if len(year)   > 1    :
     firstYear  =growth.iloc[ 0]       ['USD']
     lastYear   =growth.iloc[-1]       ['USD']
     totalGrowth=((lastYear-firstYear)/firstYear)*100
-    col1, col2 =st.columns  (2)
-    col1.metric(label='Total Salary Growth', value=f'{totalGrowth:.2f}%', delta=f'{totalGrowth:.2f}%')
+    col5, col6 =st.columns  (2)
+    col6.metric(label='Total Salary Growth', value=f'{totalGrowth:.2f}%', delta=f'{totalGrowth:.2f}%')
 st.divider ( )
 # Plotly:
 st.subheader('Charts')
