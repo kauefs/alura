@@ -1,8 +1,8 @@
-body {background-color:#000000;color:#FFFFFF;margin:0;display:flex;align-items:center;justify-content:center;height:100vh;font-family:'Verdana',sans-serif;}
+body{background-color:#000000;color:#FFFFFF;margin:0;display:flex;align-items:center;justify-content:center;height:100vh;font-family:'Verdana',sans-serif;}
 .MainContent{text-align:center;width:100%;max-width:1200px;padding:20px;}
 h1{font-size:3.5vw;font-weight:300;margin-bottom:30px;letter-spacing:1px;}
 .ProFileList{display:flex;justify-content:center;flex-wrap:wrap;gap:2vw;margin-bottom:50px;list-style:none;padding:0;}
-.ProFileItem{width: 10vw;min-width: 120px;max-width: 200px;}
+.ProFileItem{width:10vw;min-width:120px;max-width:200px;}
 .ProFile{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;}
 /* AVATAR */
 .AvatarContainer{margin:0;width:100%;display:flex;flex-direction:column;align-items:center;}
@@ -11,7 +11,7 @@ h1{font-size:3.5vw;font-weight:300;margin-bottom:30px;letter-spacing:1px;}
 /* NAME */
 .ProFileName{font-size:1.2vw;margin-top:8px;color:#C0C0C0;font-weight:400;transition:color .3s;}
 /* UNIFIED HOVER */
-.ProFile:hover  img {outline-color:#FFFFFF;}
+.ProFile:hover  img{outline-color:#FFFFFF;}
 .ProFile:hover .ProFileName{color:#FFFFFF;}
 /* MANAGE */
 .manage{margin-top:20px;}
