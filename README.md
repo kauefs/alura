@@ -1,8 +1,16 @@
 <div align=center>
-<a href=https://www.alura.com.br/ target=_blank rel=noreferrer>
-<img src=https://cursos.alura.com.br/assets/images/logos/logo-alura.svg alt=alura /></a>
+<a    href=https://www.alura.com.br/ target=_blank rel=noreferrer>
+<img   src=https://cdn2.gnarususercontent.com.br/1/7252823/5df0956d-9956-41d2-90ec-c796dcc70548.png alt=alura />
+<br>
+<img   src=https://cursos.alura.com.br/assets/images/logos/logo-alura.svg alt=alura /></a>
 </div>
 <br><br>
+
+$$31\ January\ 2026$$
+
+## Front-End with AI Immersion
+
+HTML **&** CSS **&** JavaScript
 
 $$2\ February\ 2026$$
 
@@ -87,6 +95,6 @@ _Embedding_**:** técnica de Processamento de Linguagem Natural (PLN) que conver
 [![LinkedIn](https://img.shields.io/badge/in-0077B5?logo=linkedin&logoColor=FFFFFF)](https://www.linkedin.com/in/kauefs/)
 [![Python  ](https://img.shields.io/badge/3-646464?logo=python&logoColor=FFDE57&labelColor=4584B6)](https://www.python.org/)
 
-[![ƊⱭȾɅViƧi🧿Ƞ](https://img.shields.io/badge/ƊⱭȾɅViƧi&#x1F9FF;Ƞ&trade;-0065FF?style=plastic&label=&copy;2025&labelColor=0065FF)](https://datavision.one/)
+[![ƊⱭȾɅViƧi🧿Ƞ](https://img.shields.io/badge/ƊⱭȾɅViƧi&#x1F9FF;Ƞ&trade;-0065FF?style=plastic&label=&copy;2026&labelColor=0065FF)](https://datavision.one/)
 
 </div>
