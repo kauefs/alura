@@ -19,15 +19,15 @@ Personas & Skills projetados para modelos Mixture of Experts (MoE). Regras:
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                  Usuário                          │
+│                  Usuário                        │
 └────────────────────┬────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────┐
-│              MAESTRO (Orquestrador)              │
-│  - Interface principal com o usuário             │
-│  - Coordena agentes especializados            │
-│  - Consolida resultados e apresenta ao usuário   │
+│              MAESTRO (Orquestrador)             │
+│  - Interface principal com usuário              │
+│  - Coordena agentes especializados              │
+│  - Consolida resultados e apresenta a usuário   │
 └──┬──────────────┬──────────────┬────────────────┘
    │              │              │
    ▼              ▼              ▼
@@ -79,7 +79,7 @@ ReColocAi/
 
 **Ferramentas do Zed**:
 - `spawn_agent` – despachar sub-agentes com prompts estruturados
-- `terminal`    – executar comandos shell (ex: `firecrawl search`, `firecrawl scrape`)
+- `terminal`    – executar comandos shell (ex: `firecrawl search`,`firecrawl scrape`)
 - `find_path`   – verificar se `personality-quiz.md` existe
 
 **Arquivos de Estado**:
@@ -492,7 +492,7 @@ Ordem sugerida:
 
 **Contexto passado:** título e descrição da vaga selecionada de `data/job-search-results.md` (ou perfil do usuário se nenhuma busca de vagas foi realizada)
 
-**Otimização de tokens**: A seção `referencia_persona` com o conteúdo completo de `personas/coach.md` deve ser incluída apenas no Despacho 1. Nos despachos 2-6, omita `referencia_persona` e envie apenas `tarefa`, `perfil_usuario`, `contexto` e `saida_esperada`. O Coach já conhece sua persona a partir do primeiro despacho.
+**Otimização de tokens**: A seção `referencia_persona` com o conteúdo completo de `personas/coach.md` deve ser incluída apenas no Despacho 1. Nos despachos 2-6, omita `referencia_persona` e envie apenas `tarefa`,`perfil_usuario`,`contexto` e `saida_esperada`. O Coach já conhece sua persona a partir do primeiro despacho.
 
 **Modelo de despacho sequencial:** Maestro despacha o Coach 6 vezes no total para completar uma entrevista de 5 perguntas:
 1. Despacho 1: Gerar e retornar P1
@@ -514,7 +514,7 @@ Ordem sugerida:
 ### feedback_anterior: [feedback sobre a resposta anterior, ou vazio para a pergunta 1]
 ```
 
-**Resposta do despacho final (despacho 6, após o usuário responder a pergunta 5):**
+**Resposta do despacho final (despacho 6, após usuário responder a pergunta 5):**
 ```
 ### estado: sucesso
 ### Entrevista Concluída
@@ -529,7 +529,7 @@ Pontuação: [X/10]
 1. Maestro despacha Coach com contexto P1 → Coach gera e retorna P1 → exibe pergunta → aguarda resposta do usuário
 2. Maestro despacha Coach com R1 do usuário → Coach avalia R1, retorna feedback + P2 → exibe feedback + pergunta → aguarda resposta
 3. Repetir até P5 ser feita
-4. Após o usuário responder P5, Coach avalia e retorna pontuação final e áreas para melhorar
+4. Após usuário responder P5, Coach avalia e retorna pontuação final e áreas para melhorar
 5. Maestro exibe resultados e retorna ao menu
 
 ## Plano de Aulas (4 × 30 minutos)
@@ -542,17 +542,17 @@ Pontuação: [X/10]
 - Instalar Node.js no Windows usando NVM.exe:
   - Executar o PowerShell como Administrador e executar: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
   - Baixar e instalar o NVM.exe em https://github.com/coreybutler/nvm-windows/releases
-  - Abrir uma nova janela do PowerShell e executar: `nvm install latest` seguido de `nvm use latest`
+  - Abrir nova janela do PowerShell e executar: `nvm install latest` seguido de `nvm use latest`
   - Verificar a instalação: `node --version` e `npm --version`
-- Instalar Firecrawl: `npx -y firecrawl-cli@latest` (se `init` ou `--all` não funcionarem, use `npx -y firecrawl-cli@latest --help` para ver os comandos disponíveis; use `-k <API_KEY>` se a autenticação pelo navegador não estiver disponível)
+- Instalar Firecrawl: `npx -y firecrawl-cli@latest` (se `init` ou `--all` não funcionarem, use `npx -y firecrawl-cli@latest --help` para ver comandos disponíveis; use `-k <API_KEY>` se a autenticação pelo navegador não estiver disponível)
 - Verificar se o Firecrawl funciona (PowerShell):
   ```powershell
   firecrawl --status
   firecrawl scrape "https://firecrawl.dev"
   ```
-- Explicar o primeiro passo de fluxos de trabalho agênticos: escrever um plano
-- Elaborar o plano do projeto juntos: arquitetura, diretórios, personas, formatos de dados
-- Explicar o conceito de envelopes de despacho/resposta
+- Explicar primeiro passo de fluxos de trabalho agênticos: escrever plano
+- Elaborar plano do projeto juntos: arquitetura, diretórios, personas, formatos de dados
+- Explicar conceito de envelopes de despacho/resposta
 - Criar `recoloca-ia/AGENTS.md` com:
   ```
   **LEIA E ADOTE IMEDIATAMENTE A PERSONA EM `personas/maestro.md`**
@@ -569,43 +569,43 @@ Pontuação: [X/10]
   Não desvie das instruções da persona.
   Para contexto do escopo do projeto, consulte este arquivo `AGENTS.md` e a estrutura de diretórios acima.
   ```
-- Criar a estrutura de diretórios (`personas/`, `skills/`, `data/`) via PowerShell: `New-Item -ItemType Directory -Force -Path personas, skills, data`
-- Criar `skills/firecrawl.md` com a skill do CLI Firecrawl (fornecida como material de seed ou baixar de `https://raw.githubusercontent.com/firecrawl/cli/main/skills/firecrawl-cli/SKILL.md`)
+- Criar estrutura de diretórios (`personas/`,`skills/`,`data/`) via PowerShell: `New-Item -ItemType Directory -Force -Path personas, skills, data`
+- Criar `skills/firecrawl.md` com skill do CLI Firecrawl (fornecida como material de seed ou baixar de `https://raw.githubusercontent.com/firecrawl/cli/main/skills/firecrawl-cli/SKILL.md`)
 - Criar template `data/personality-quiz.md`
 - Criar `skills/dispatch.md` com o protocolo de despacho e handoff de agentes (tabela de roteamento, formatos de envelope, especificações de handoff por agente, despacho sequencial do Coach, tratamento de erros)
 - Escrever `personas/maestro.md`: saudação, verificação do quiz, fluxo do quiz, menu, análise de opções. Referenciar `skills/dispatch.md` como uma skill obrigatória no playbook.
-- Testar: Agente saúda, detecta quiz ausente, guia pelo quiz, salva user-profile.md, mostra menu
-- Entregável: Maestro totalmente funcional com quiz e menu
+- Testar: agente saúda, detecta quiz ausente, guia pelo quiz, salva user-profile.md, mostra menu
+- Entregável: maestro totalmente funcional com quiz e menu
 
-### Aula 2: Scout — Agente de Busca de Vagas
+### Aula 2: Scout – Agente de Busca de Vagas
 **Objetivo**: Opção A do menu funciona. Agente busca vagas via Firecrawl, mostra resultados com correspondência de habilidades.
 - Escrever `skills/job-search.md`: busca Firecrawl para consultar sites de vagas, analisar resultados JSON, corresponder habilidades
 - Escrever `personas/scout.md`: papel, ferramentas, referência à skill `skills/job-search.md`, Response Envelope
 - Conectar `spawn_agent` no Maestro para despachar o Scout quando o usuário digitar "A"
-- Testar: Usuário seleciona A → Scout busca via Firecrawl → resultados exibidos com habilidades correspondentes/em falta
-- Testar: Se a busca falhar, o erro é reportado ao usuário
+- Testar: usuário seleciona A → Scout busca via Firecrawl → resultados exibidos com habilidades correspondentes/em falta
+- Testar: se a busca falhar, o erro é reportado ao usuário
 - Entregável: Scout totalmente funcional, busca de vagas end-to-end a partir do menu
 
-### Aula 3: Curator — Agente de Busca de Cursos
+### Aula 3: Curator – Agente de Busca de Cursos
 **Objetivo**: Opção B do menu funciona. Agente busca na Alura via Firecrawl, recomenda cursos para lacunas de habilidades.
-- Escrever `skills/course-analysis.md`: busca Firecrawl para cursos da Alura, corresponder cursos às habilidades em falta, ordenar por nível
-- Escrever `personas/curator.md`: papel, ferramentas, lê resultados do Scout, referência à skill `skills/course-analysis.md`, Response Envelope
+- Escrever `skills/course-analysis.md`: busca Firecrawl para cursos da Alura, corresponder cursos a habilidades em falta, ordenar por nível
+- Escrever `personas/curator.md`: papel, ferramentas, ler resultados do Scout, referência a skill `skills/course-analysis.md`, Response Envelope
 - Conectar `spawn_agent` no Maestro para despachar o Curator quando o usuário digitar "B"
 - Curator recebe habilidades em falta dos resultados do Scout via contexto de handoff
-- Testar: Usuário seleciona B → Curator busca na Alura via Firecrawl → recomendações de cursos exibidas
-- Testar: Se a busca falhar, o erro é reportado ao usuário
+- Testar: usuário seleciona B → Curator busca na Alura via Firecrawl → exibe recomendações de cursos
+- Testar: se a busca falhar, o erro é reportado ao usuário
 - Entregável: Curator totalmente funcional, busca de cursos end-to-end a partir do menu
 
-### Aula 4: Coach — Simulador de Entrevistas
-**Objetivo**: Opção C do menu funciona. Agente executa uma entrevista simulada com feedback e pontuação.
-- Escrever `skills/interview-sim.md`: geração de perguntas, avaliação de respostas, pontuação
+### Aula 4: Coach – Simulador de Entrevistas
+**Objetivo**: Opção C do menu funciona. Agente executa entrevista simulada com feedback e pontuação.
+- Escrever `skills/interview-sim.md`: gerar perguntas, avaliar respostas, pontuação
 - Escrever `personas/coach.md`: papel, ferramentas, modelo de despacho sequencial, referência à skill `skills/interview-sim.md`, formato de resposta
 - Conectar `spawn_agent` no Maestro para despachar o Coach 6 vezes sequencialmente, mantendo estado entre chamadas
 - Maestro rastreia número da pergunta, perguntas anteriores e respostas do usuário em cada handoff
-- Se o usuário ainda não buscou vagas, o Coach usa o perfil do usuário para gerar perguntas gerais
-- Se o usuário tem resultados de vagas, o Coach usa uma vaga selecionada para perguntas direcionadas
-- Testar: Usuário seleciona C → Coach faz 5 perguntas em 6 despachos → dá feedback → pontuação final
-- Testar: Fluxo completo: quiz → busca de vagas → entrevista para uma vaga encontrada
+- Se o usuário ainda não buscou vagas, Coach usa o perfil do usuário para gerar perguntas gerais
+- Se o usuário tem resultados de vagas, Coach usa uma vaga selecionada para perguntas direcionadas
+- Testar: usuário seleciona C → Coach faz 5 perguntas em 6 despachos → dá feedback → pontuação final
+- Testar: fluxo completo: quiz → busca de vagas → entrevista para uma vaga encontrada
 - Entregável: Coach totalmente funcional, sistema completo com todos os 4 agentes operacionais
 
 ## Próximos Passos (Após a Imersão)
