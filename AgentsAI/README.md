@@ -8,12 +8,12 @@ Sistema multi-agente para desenvolvimento de carreira, ajudando a descobrir vaga
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                  Usuário                         │
+│                  Usuário                        │
 └────────────────────┬────────────────────────────┘
                       │
                       ▼
 ┌─────────────────────────────────────────────────┐
-│              MAESTRO (Orquestrador)              │
+│              MAESTRO (Orquestrador)             │
 │  - Interface primária com o usuário             │
 │  - Coordena agentes especializados              │
 │  - Consolida resultados e apresenta ao usuário  │
